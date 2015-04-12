@@ -1,0 +1,22 @@
+{% include 'traveller.htm' %}
+<link href="table.css" rel="stylesheet" type="text/css">
+<div class="row" align="center">
+
+<div class="col-lg-4" align="center">
+<button type="button" class="btn btn-default" ><a href="/tasks/" > List Tasks</a></button></div>
+<div class="col-lg-4"><button type="button" class="btn btn-default"><a href="/admin/TT/task/add/" > Add Task</a></button></div>
+<div class-"col-lg-4"><button type="button" class="btn btn-default"><a href="/chat/" > Chat</a></button></div>
+</div>
+{% block funcs %}
+
+<br>
+
+    <div align="center" >
+    <table border="1" cellpadding="10" align="center" >
+    <tr align="center"><th> Task id</th> <th> Source</th> <th> Destination</th> <th> Budget</th><th>Plan</th></tr>
+    {% for a in contt %}
+<tr align="center">  <td> {{ a.task_id }}</td>  <td>{{ a.source }}</td> <td>{{ a.destn }} </td> <td>{{ a.budget }}</td><td><a href="#">Start Planning</a></td> </tr>
+    {% endfor %}
+    </table>
+    </div>
+{% endblock funcs %}

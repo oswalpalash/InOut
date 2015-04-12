@@ -1,0 +1,14 @@
+{% include 'traveller.htm' %}
+<button type="button" class="btn btn-default" style="position:absolute;left:30%;"><a href="/admin/TT/trip/add/"> Add Trip</a></button>
+ <button type="button" class="btn btn-default"style="position:absolute;left:36%;"><a href="/listtrip/"> List Trips</a></button>
+
+{% block funcs %}
+<ul style="position: absolute;top:40%;">
+Hello {{ usernam }}, Chat with :
+
+    {% for a in users %}
+        <li><a href="{{ a.u_id }}">{{ a.name }}</a></li><br>
+    {% endfor %}
+</ul>
+
+{% endblock funcs %}
